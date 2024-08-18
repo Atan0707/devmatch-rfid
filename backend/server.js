@@ -59,8 +59,8 @@ app.post("/postWallet", (req, res) => {
 
 app.get("/getNFT", (req, res) => {
     try {
-        // Send the nftIDs array as JSON
-        res.status(200).json(nftIDs);
+        // Wrap the nftIDs array in an object
+        res.status(200).json({ nftIDs });
     } catch (err) {
         console.log("Error processing the request: ", err);
         res.status(500).send({ message: "Failed to retrieve data" });
@@ -69,8 +69,8 @@ app.get("/getNFT", (req, res) => {
 
 app.get("/getWalletAddress", (req, res) => {
     try {
-        // Send the walletInfo as JSON
-        res.status(200).json(walletInfo);
+        // Wrap the walletInfo object in another object
+        res.status(200).json({ walletInfo });
     } catch (err) {
         console.log("Error processing the request: ", err);
         res.status(500).send({ message: "Failed to retrieve data" });

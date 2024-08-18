@@ -68,19 +68,19 @@ void loop()
         uidStr += String(mfrc522.uid.uidByte[i] < 0x10 ? "0" : "") + String(mfrc522.uid.uidByte[i], HEX);
     }
 
-    if (uidStr == 'b1224024') {
-        nftID = 1;
-        isNFT = true;
-    } else if (uidStr == '02771a8f95a000') {
-        nftID = 2;
-        isNFT = true;
-    } else if (uidStr == '058e764d') {
-        nftID = 3;
-        isNFT = true;
-    } else if (uidStr == '025a00adc5e000') {
-        walletAddress = '0x4Ac822e2F3aB5278F20b7D08C6d25eDfaB006955';
-        isNFT = false;
-    } 
+    if (uidStr == "b1224024") {
+    nftID = 1;
+    isNFT = true;
+} else if (uidStr == "02771a8f95a000") {
+    nftID = 2;
+    isNFT = true;
+} else if (uidStr == "058e764d") {
+    nftID = 3;
+    isNFT = true;
+} else if (uidStr == "025a00adc5e000") {
+    walletAddress = "0x4Ac822e2F3aB5278F20b7D08C6d25eDfaB006955";
+    isNFT = false;
+}
 
     Serial.print("Card UID: ");
     Serial.println(uidStr);
